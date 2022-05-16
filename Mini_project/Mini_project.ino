@@ -16,13 +16,13 @@
 WiFiClient client;
 
 // WIFI
-char Wifi_Name[] = "true_home2G_DD2";         // Wifi Name
-char Wifi_Pass[] = "0871234448";              // Wifi Password
+char Wifi_Name[] = "___________";         // Wifi Name
+char Wifi_Pass[] = "___________";              // Wifi Password
 // ThingSpeak
 unsigned long Channel_ID = 1720954;         // Channel ID
-const char * APIkey = "G83D5Z1Q8JMSTLMJ";   // Write API Key
+const char * APIkey = "___________";   // Write API Key
 // LINE Notify
-char LINE_TOKEN[] = "n6osjXfpYtku6zHTFPMZdttkuoUJ1FC5hSt5f2t4c3U";  // LINE Token
+char LINE_TOKEN[] = "___________";  // LINE Token
 
 Adafruit_8x16minimatrix matrix = Adafruit_8x16minimatrix();
 
