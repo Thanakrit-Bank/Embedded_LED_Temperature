@@ -1,4 +1,4 @@
-void LED_matrix(float temp, int blnk) {
+void LED_matrix(float temp) {
   Wire.begin(I2C_SDA0,I2C_SCL0);
   matrix.begin(LED_ADDR);
   
@@ -11,5 +11,5 @@ void LED_matrix(float temp, int blnk) {
   matrix.print(temp);
   matrix.blinkRate(blnk);
   matrix.writeDisplay();
-  delay(100);
+  delay(500);
 }

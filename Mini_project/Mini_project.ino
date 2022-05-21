@@ -36,6 +36,7 @@ int state1 = 0;
 int state2 = 0;
 int buttonState11;
 int buttonState12;
+int blnk = 0;
 
 void setup() {
   Serial.begin(115200); 
@@ -60,7 +61,7 @@ void setup() {
 
 void loop() {
   float Temp = Temperature();
-  LED_matrix(Temp, 0);
+  LED_matrix(Temp);
   buttonState11 = digitalRead(SW1);
   buttonState12 = digitalRead(SW2);
   button();

@@ -23,9 +23,11 @@ void button(){
   
   if (stop_time1- start_time1 >= 3000){ // กดซ้าย 3 วิ แล้วจะเข้าตั้งค่าสูงสุด 
     Serial.println("กดแล้ว " + String(stop_time1-start_time1));
+    blnk = 2;
     set_temp(0);
   }else if (stop_time2- start_time2 >= 3000){// กดขวา 3 วิ แล้วจะเข้าตั้งค่าต่ำสุด 
     Serial.println("กดแล้ว " + String(stop_time2-start_time2));
+    blnk = 2;
     set_temp(1);
   }
 }
@@ -45,8 +47,9 @@ void set_temp(int choose){
       choose = 2 ;
       Serial.println("Max: " + String(max_temp));
       Serial.println("Min: " + String(min_temp));
+      blnk = 0;
     }
-    LED_matrix(max_temp, 10000);
+    LED_matrix(max_temp);
     delay(100);
   }
 
@@ -63,8 +66,9 @@ void set_temp(int choose){
       choose = 2 ;
       Serial.println("Max: " + String(max_temp));
       Serial.println("Min: " + String(min_temp));
+      blnk = 0;
     }
-    LED_matrix(min_temp, 10000);
+    LED_matrix(min_temp);
     delay(100);
   }
 }
